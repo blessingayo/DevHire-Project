@@ -25,7 +25,7 @@ const Currency = ({ setCurrency: changeCurrency }) => {
           className="select"
           onChange={(e) =>
             changeCurrency(
-              currency.find((curr) => curr.short == e.target.value)
+              currency.find((curr) => curr.short === e.target.value)
             )
           }
         >
