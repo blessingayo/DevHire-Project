@@ -127,20 +127,21 @@ color: gray;
     margin-bottom: -10px;
 }
 
-.home:hover{
+/* .home:hover{
    
     color: black;
-}
+} */
 
 .home-sec{
     display: flex;
-    padding-left: 30px;
+    column-gap: 1px;
+    padding: 10px;
     /* position: fixed; */
     margin: 30px;
 }
 
 .home-container{
-    display: flex;
+    /* display: flex; */
     cursor: pointer;
 }
 
@@ -149,7 +150,10 @@ color: gray;
 .home-sec:hover {
   
         border-left: 3px solid #1D9BF0;
-        height: 25px;
+        background-color:#75a9cc;
+        width: 73%;
+        height: 30px;
+        color: black;
 
 }
 
@@ -158,13 +162,10 @@ color: gray;
 .side-icons:hover{
 height: 20px;
 width: 20px;
-background-color: #1D9BF0;
-color: grey;
 border-radius: 5px;
 padding: 3px;
 font-size: 10px;
 width: 13px;
 padding-left: 10px;
 padding-right: 10px;
-color: white;
 }

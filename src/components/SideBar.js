@@ -38,7 +38,6 @@ const SideBar = () => {
   useEffect(() => {
     async function getAllDevelopers() {
       const response = await axios.get(apiData);
-      // console.log(response.data.data.service_search_results.hits._source)
       setDevelopers(response.data.data.service_search_results.hits);
     }
     getAllDevelopers();
@@ -54,47 +53,37 @@ const SideBar = () => {
             </p>
           </div>
           <div className="home-container">
-            <div>
-              <div className="home-sec">
-                <div
-                  onClick={() => {
-                    toggleCurrentPage("home");
-                  }}
-                >
-                  <FaSearch className="side-icons" />
-                </div>
-
-                <div className="sidebar-icon">
-                  <div>
-                    <div
-                      onClick={() => {
-                        toggleCurrentPage("home");
-                      }}
-                    >
-                      <h5 className="home home-style">Home</h5>
-                    </div>
-                  </div>
-                </div>
+            <div
+              onClick={() => {
+                toggleCurrentPage("home");
+              }}
+              className="home-sec"
+            >
+              <div>
+                <FaSearch className="side-icons" />
               </div>
 
-              <div className="home-container">
-                <div className="home-sec">
-                  <div
-                    onClick={() => {
-                      toggleCurrentPage("favorite");
-                    }}
-                  >
-                    <FaRegHeart className="side-icons" />
-                  </div>
-
-                  <div
-                    onClick={() => {
-                      toggleCurrentPage("favorite");
-                    }}
-                  >
-                    <h5 className="home">Favorite</h5>
-                  </div>
+              <div className="sidebar-icon">
+                <div>
+                  <p className="home home-style">Home</p>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="home-container">
+            <div
+              onClick={() => {
+                toggleCurrentPage("favorite");
+              }}
+              className="home-sec"
+            >
+              <div>
+                <FaRegHeart className="side-icons" />
+              </div>
+
+              <div>
+                <p className="home">Favorite</p>
               </div>
             </div>
           </div>

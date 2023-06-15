@@ -14,7 +14,6 @@ const HomepageDevHire = ({ developers, addToFavorite, favorites }) => {
           <p className="hire-developers">Hire Top Developers</p>
           <div className="main-container">
             {developers.map((developer, i) => {
-              console.log(developer);
               return (
                 <div className="each-developer">
                   <div className="developers-container">
@@ -56,7 +55,7 @@ const HomepageDevHire = ({ developers, addToFavorite, favorites }) => {
                             <h5>{developer._source.display_name}</h5>
                             <h6 className="amount">
                               {currency.short ||
-                                developer._source.currency_name}{" "}
+                                developer._source.currency_name}
                               {currency.short
                                 ? parseInt(
                                     developer._source.starting_from /
